@@ -7,8 +7,12 @@ const binsarySearch = (arr, target) => {
     let leftIndex = 0
     let rightIndex = arr.length - 1
     let middleIndex = Math.round((leftIndex + rightIndex) / 2)
-
     let isTargetFound = false
+
+    if (!(arr[leftIndex] <= target && arr[rightIndex] >= target)) {
+        console.log(`Target is not in this array`)
+        return
+    }
 
     while (!isTargetFound) {
         if (arr[middleIndex] < target) {

@@ -1,11 +1,10 @@
-import { createWinstonLogger, mongouseConnect } from './utilities';
+import { createWinstonLogger } from './utilities';
 
 class ServerGlobal {
   private static _instance: ServerGlobal;
   private readonly _logger: Winston.Logger;
 
   private constructor() {
-    mongouseConnect()                       // Init DB instance once
     this._logger = createWinstonLogger()    // Init Logger instance once
   }
 

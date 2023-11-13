@@ -1,4 +1,4 @@
-import { createWinstonLogger, mongouseConnect } from '../utilities';
+import { createWinstonLogger, mongouseConnect } from './utilities';
 
 class ServerGlobal {
   private static _instance: ServerGlobal;

@@ -1,4 +1,5 @@
-import { createWinstonLogger } from './utilities';
+export function mongouseConnect() { }
+export function createWinstonLogger() { }
 
 class ServerGlobal {
   private static _instance: ServerGlobal;
@@ -21,7 +22,7 @@ class ServerGlobal {
 }
 
 
-const ins = ServerGlobal.getInstance();   // Init global set up once
+ServerGlobal.getInstance();   // Init global set up once
 
 ServerGlobal.getInstance().loggerInstance.info(`Server is running on port: ${process.env.PORT}`);  // still will return same instance
 
